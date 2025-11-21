@@ -1,0 +1,16 @@
+﻿using AutoMapper;
+using IntegracaoBrasilApi.DTOs;
+using IntegracaoBrasilApi.Models;
+
+namespace IntegracaoBrasilApi.Mapping
+{
+    public class BancoMapping : Profile
+    {
+        public BancoMapping()
+        {
+            CreateMap(typeof(ResponseGenerico<>), typeof(ResponseGenerico<>));
+            CreateMap<BancoResponse, BancoModel>();
+            CreateMap<BancoModel, BancoResponse>();
+        }
+    }
+}
