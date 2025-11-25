@@ -14,25 +14,19 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<IBrasilApi, BrasilApiRest>();
-builder.Services.AddSingleton<IEnderecoService, EnderecoService>();
 builder.Services.AddSingleton<IBancoService, BancoService>();
+builder.Services.AddSingleton<ICambioService, CambioService>();
+builder.Services.AddSingleton<ICepService, CepService>();
 builder.Services.AddSingleton<ICnpjService, CnpjService>();
 
-builder.Services.AddAutoMapper(cfg =>
-{
-    cfg.AddProfile<EnderecoMapping>();
-});
 
 builder.Services.AddAutoMapper(cfg =>
 {
     cfg.AddProfile<BancoMapping>();
-});
-
-builder.Services.AddAutoMapper(cfg =>
-{
+    cfg.AddProfile<CambioMapping>();
+    cfg.AddProfile<CepMapping>();
     cfg.AddProfile<CnpjMapping>();
 });
-
 
 var app = builder.Build();
 

@@ -13,7 +13,7 @@ namespace IntegracaoBrasilApi.Mapping
             CreateMap<CnpjModel, CnpjResponse>();
 
             CreateMap<CnaesModel, CnaesResponse>();
-            CreateMap<CnaesResponse, CnaesModel> ();
+            CreateMap<CnaesResponse, CnaesModel>();
 
             CreateMap<SocioAdministradorModel, SocioAdministradorResponse>();
             CreateMap<SocioAdministradorResponse, SocioAdministradorModel>();
