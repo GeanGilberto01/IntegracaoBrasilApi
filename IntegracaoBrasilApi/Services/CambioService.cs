@@ -1,9 +1,6 @@
 ﻿using AutoMapper;
 using IntegracaoBrasilApi.DTOs;
 using IntegracaoBrasilApi.Interfaces;
-using IntegracaoBrasilApi.Models;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace IntegracaoBrasilApi.Services
 {

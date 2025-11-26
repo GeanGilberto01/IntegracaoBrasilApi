@@ -6,6 +6,6 @@ namespace IntegracaoBrasilApi.Interfaces
     {
         Task<ResponseGenerico<List<BancoResponse>>> BuscarTodos();
 
-        Task<ResponseGenerico<BancoResponse>> BuscaBanco(string codigoBanco);
+        Task<ResponseGenerico<BancoResponse>> BuscaBanco(int codigoBanco);
     }
 }

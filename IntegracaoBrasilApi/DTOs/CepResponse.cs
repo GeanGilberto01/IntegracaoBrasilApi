@@ -1,5 +1,4 @@
-﻿using IntegracaoBrasilApi.Models;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace IntegracaoBrasilApi.DTOs
 {

@@ -2,7 +2,7 @@
 
 namespace IntegracaoBrasilApi.Models
 {
-    public class CptecPrevisaoModel
+    public class PrevisaoModel
     {
         [JsonPropertyName("cidade")]
         public string? Cidade { get; set; }

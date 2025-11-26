@@ -21,7 +21,7 @@ namespace IntegracaoBrasilApi.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> BuscarCep([FromRoute] string cep)
+        public async Task<IActionResult> BuscarCep([FromRoute] int cep)
         {
             var response = await _enderecoService.BuscarCep(cep);
 

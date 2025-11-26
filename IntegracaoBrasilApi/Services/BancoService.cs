@@ -15,7 +15,7 @@ namespace IntegracaoBrasilApi.Services
             _brasilApi = brasilApi;
         }
 
-        public async Task<ResponseGenerico<BancoResponse>> BuscaBanco(string codigoBanco)
+        public async Task<ResponseGenerico<BancoResponse>> BuscaBanco(int codigoBanco)
         {
             var banco = await _brasilApi.BuscarBanco(codigoBanco);
             return _mapper.Map<ResponseGenerico<BancoResponse>>(banco);

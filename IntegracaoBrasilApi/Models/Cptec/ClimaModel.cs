@@ -2,7 +2,7 @@
 
 namespace IntegracaoBrasilApi.Models
 {
-    public class CptecClimaModel
+    public class ClimaModel
     {
         [JsonPropertyName("codigo_icao")]
         public string? CodigoIcao;

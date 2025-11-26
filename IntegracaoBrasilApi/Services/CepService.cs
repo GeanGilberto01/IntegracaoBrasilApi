@@ -15,7 +15,7 @@ namespace IntegracaoBrasilApi.Services
             _brasilApi = brasilApi;
         }
 
-        public async Task<ResponseGenerico<CepResponse>> BuscarCep(string cep)
+        public async Task<ResponseGenerico<CepResponse>> BuscarCep(int cep)
         {
             var endereco = await _brasilApi.BuscarCep(cep);
 

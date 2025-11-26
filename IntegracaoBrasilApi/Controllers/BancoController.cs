@@ -34,7 +34,7 @@ namespace IntegracaoBrasilApi.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Buscar([RegularExpression("^[0-9]*$")] string codigoBanco)
+        public async Task<IActionResult> Buscar([RegularExpression("^[0-9]*$")] int codigoBanco)
         {
             var response = await _bancoService.BuscaBanco(codigoBanco);
 
