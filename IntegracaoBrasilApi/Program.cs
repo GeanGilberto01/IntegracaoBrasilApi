@@ -19,6 +19,7 @@ builder.Services.AddSingleton<ICambioService, CambioService>();
 builder.Services.AddSingleton<ICepService, CepService>();
 builder.Services.AddSingleton<ICnpjService, CnpjService>();
 
+builder.Services.AddHttpClient<HttpService>();
 
 builder.Services.AddAutoMapper(cfg =>
 {
