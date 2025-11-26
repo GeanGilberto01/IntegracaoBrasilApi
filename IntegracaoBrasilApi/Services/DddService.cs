@@ -18,7 +18,7 @@ namespace IntegracaoBrasilApi.Services
         public async Task<ResponseGenerico<DddResponse>> BuscarDdds(int ddd)
         {
             var response = await _brasilApi.BuscarDdds(ddd);
-            return _mapper.Map<ResponseGenerico<DddResponse>>(response)
+            return _mapper.Map<ResponseGenerico<DddResponse>>(response);
         }
     }
 }
