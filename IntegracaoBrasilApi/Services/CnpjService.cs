@@ -17,9 +17,8 @@ namespace IntegracaoBrasilApi.Rest
 
         public async Task<ResponseGenerico<CnpjResponse>> BuscarCnpj(string cnpj)
         {
-            var empresa = await _brasilApi.BuscarCnpj(cnpj);
-
-            return _mapper.Map<ResponseGenerico<CnpjResponse>>(empresa);
+            var response = await _brasilApi.BuscarCnpj(cnpj);
+            return _mapper.Map<ResponseGenerico<CnpjResponse>>(response);
         }
     }
 }

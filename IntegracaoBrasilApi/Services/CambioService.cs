@@ -17,14 +17,14 @@ namespace IntegracaoBrasilApi.Services
 
         public async Task<ResponseGenerico<List<MoedaResponse>>> BuscarMoedas()
         {
-            var moedas = await _brasilApi.BuscarMoedas();
-            return _mapper.Map<ResponseGenerico<List<MoedaResponse>>>(moedas);
+            var response = await _brasilApi.BuscarMoedas();
+            return _mapper.Map<ResponseGenerico<List<MoedaResponse>>>(response);
         }
 
         public async Task<ResponseGenerico<CambioResponse>> BuscarCambio(string moeda, string data)
         {
-            var cambios = await _brasilApi.BuscarCambio(moeda, data);
-            return _mapper.Map<ResponseGenerico<CambioResponse>>(cambios);
+            var response = await _brasilApi.BuscarCambio(moeda, data);
+            return _mapper.Map<ResponseGenerico<CambioResponse>>(response);
         }
     }
 }

@@ -17,15 +17,14 @@ namespace IntegracaoBrasilApi.Services
 
         public async Task<ResponseGenerico<BancoResponse>> BuscaBanco(int codigoBanco)
         {
-            var banco = await _brasilApi.BuscarBanco(codigoBanco);
-            return _mapper.Map<ResponseGenerico<BancoResponse>>(banco);
+            var response = await _brasilApi.BuscarBanco(codigoBanco);
+            return _mapper.Map<ResponseGenerico<BancoResponse>>(response);
         }
 
         public async Task<ResponseGenerico<List<BancoResponse>>> BuscarTodos()
         {
-            var bancos = await _brasilApi.BuscarTodosBancos();
-            return _mapper.Map<ResponseGenerico<List<BancoResponse>>>(bancos);
-
+            var response = await _brasilApi.BuscarTodosBancos();
+            return _mapper.Map<ResponseGenerico<List<BancoResponse>>>(response);
         }
     }
 }

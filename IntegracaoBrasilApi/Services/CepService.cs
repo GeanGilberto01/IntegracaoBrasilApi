@@ -17,16 +17,14 @@ namespace IntegracaoBrasilApi.Services
 
         public async Task<ResponseGenerico<CepResponse>> BuscarCep(int cep)
         {
-            var endereco = await _brasilApi.BuscarCep(cep);
-
-            return _mapper.Map<ResponseGenerico<CepResponse>>(endereco);
+            var response = await _brasilApi.BuscarCep(cep);
+            return _mapper.Map<ResponseGenerico<CepResponse>>(response);
         }
 
         public async Task<ResponseGenerico<CepResponse>> BuscarCepV2(string cep)
         {
-            var endereco = await _brasilApi.BuscarCepV2(cep);
-
-            return _mapper.Map<ResponseGenerico<CepResponse>>(endereco);
+            var response = await _brasilApi.BuscarCepV2(cep);
+            return _mapper.Map<ResponseGenerico<CepResponse>>(response);
         }
     }
 }
