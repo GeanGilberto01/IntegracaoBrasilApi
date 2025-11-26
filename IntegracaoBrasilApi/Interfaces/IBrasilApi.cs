@@ -1,6 +1,5 @@
 ﻿using IntegracaoBrasilApi.DTOs;
 using IntegracaoBrasilApi.Models;
-using static System.Net.WebRequestMethods;
 
 namespace IntegracaoBrasilApi.Interfaces
 {
