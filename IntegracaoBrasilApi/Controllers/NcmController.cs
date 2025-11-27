@@ -40,7 +40,7 @@ namespace IntegracaoBrasilApi.Controllers
             return (response.CodigoHttp == HttpStatusCode.OK) ? Ok(response.Dados) : StatusCode((int)response.CodigoHttp, response.Erro);
         }
 
-        [HttpGet("v1/Busca/Ncm/{codigo}")]
+        [HttpGet("v1/Busca/Ncm/Codigo/{codigo}")]
         [ProducesResponseType(typeof(NcmResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]

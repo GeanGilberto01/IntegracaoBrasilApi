@@ -64,9 +64,9 @@ namespace IntegracaoBrasilApi.Rest
             return await _http.HttpGet<List<CidadeModel>>($"https://brasilapi.com.br/api/cptec/v1/cidade");
         }
 
-        public async Task<ResponseGenerico<CidadeModel>> BuscarCidade(string nomeCidade)
+        public async Task<ResponseGenerico<List<CidadeModel>>> BuscarCidade(string nomeCidade)
         {
-            return await _http.HttpGet<CidadeModel>($"https://brasilapi.com.br/api/cvm/corretoras/v1/{nomeCidade}");
+            return await _http.HttpGet<List<CidadeModel>>($"https://brasilapi.com.br/api/cptec/v1/cidade/{nomeCidade}");
         }
 
         public async Task<ResponseGenerico<List<ClimaModel>>> BuscarCondicaoCapital()

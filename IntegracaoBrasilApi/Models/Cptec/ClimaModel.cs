@@ -8,7 +8,7 @@ namespace IntegracaoBrasilApi.Models
         public string? CodigoIcao { get; set; }
 
         [JsonPropertyName("atualizado_em")]
-        public DateTime? AtualizadoEm { get; set; }
+        public string? AtualizadoEm { get; set; }
 
         [JsonPropertyName("pressao_atmosferica")]
         public string? PressaoAtmosferica { get; set; }
@@ -17,13 +17,13 @@ namespace IntegracaoBrasilApi.Models
         public string? Visibilidade { get; set; }
 
         [JsonPropertyName("vento")]
-        public int? Vento { get; set; }
+        public string? Vento { get; set; }
 
         [JsonPropertyName("direcao_vento")]
-        public int? DirecaoVento { get; set; }
+        public string? DirecaoVento { get; set; }
 
         [JsonPropertyName("umidade")]
-        public int? Umidade { get; set; }
+        public string? Umidade { get; set; }
 
         [JsonPropertyName("condicao")]
         public string? Condicao { get; set; }
@@ -32,6 +32,6 @@ namespace IntegracaoBrasilApi.Models
         public string? CondicaoDesc { get; set; }
 
         [JsonPropertyName("temp")]
-        public int? Temp { get; set; }
+        public string? Temp { get; set; }
     }
 }

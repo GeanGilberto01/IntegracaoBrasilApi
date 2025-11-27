@@ -1,4 +1,5 @@
 ﻿using IntegracaoBrasilApi.DTOs;
+using IntegracaoBrasilApi.Models;
 
 namespace IntegracaoBrasilApi.Interfaces
 {
@@ -6,7 +7,7 @@ namespace IntegracaoBrasilApi.Interfaces
     {
         Task<ResponseGenerico<List<CidadeResponse>>> BuscarTodasCidades();
 
-        Task<ResponseGenerico<CidadeResponse>> BuscarCidade(string nomeCidade);
+        Task<ResponseGenerico<List<CidadeResponse>>> BuscarCidade(string nomeCidade);
 
         Task<ResponseGenerico<List<ClimaResponse>>> BuscarCondicaoCapital();
 

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using IntegracaoBrasilApi.DTOs;
 using IntegracaoBrasilApi.Interfaces;
+using IntegracaoBrasilApi.Models;
 
 namespace IntegracaoBrasilApi.Services
 {
@@ -21,10 +22,10 @@ namespace IntegracaoBrasilApi.Services
             return _mapper.Map<ResponseGenerico<List<CidadeResponse>>>(response);
         }
 
-        public async Task<ResponseGenerico<CidadeResponse>> BuscarCidade(string nomeCidade)
+        public async Task<ResponseGenerico<List<CidadeResponse>>> BuscarCidade(string nomeCidade)
         {
             var response = await _brasilApi.BuscarCidade(nomeCidade);
-            return _mapper.Map<ResponseGenerico<CidadeResponse>>(response);
+            return _mapper.Map<ResponseGenerico<List<CidadeResponse>>>(response);
         }
 
         public async Task<ResponseGenerico<ClimaResponse>> BuscarCondicaoAeroporto(string codicoIcao)

@@ -25,7 +25,7 @@ namespace IntegracaoBrasilApi.Interfaces
 
         Task<ResponseGenerico<List<CidadeModel>>> BuscarTodasCidades();
 
-        Task<ResponseGenerico<CidadeModel>> BuscarCidade(string nomeCidade);
+        Task<ResponseGenerico<List<CidadeModel>>> BuscarCidade(string nomeCidade);
 
         Task<ResponseGenerico<List<ClimaModel>>> BuscarCondicaoCapital();
 
