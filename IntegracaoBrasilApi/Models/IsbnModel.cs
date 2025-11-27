@@ -2,7 +2,7 @@
 
 namespace IntegracaoBrasilApi.Models
 {
-    public class Dimensions
+    public class DimensionsModel
     {
         [JsonPropertyName("width")]
         public double? Width;
@@ -35,7 +35,7 @@ namespace IntegracaoBrasilApi.Models
         public string? Synopsis;
 
         [JsonPropertyName("dimensions")]
-        public Dimensions? Dimensions;
+        public DimensionsModel? Dimensions;
 
         [JsonPropertyName("year")]
         public int? Year;

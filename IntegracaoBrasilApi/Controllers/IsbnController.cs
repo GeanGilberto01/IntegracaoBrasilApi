@@ -7,23 +7,23 @@ namespace IntegracaoBrasilApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CnpjController : ControllerBase
+    public class IsbnController : ControllerBase
     {
-        public readonly ICnpjService _cnpjService;
+        public readonly IIsbnService _isbnService;
 
-        public CnpjController(ICnpjService cnpjService)
+        public IsbnController(IIsbnService isbnService)
         {
-            _cnpjService = cnpjService;
+            _isbnService = isbnService;
         }
 
-        [HttpGet("v1/Busca/Cnpj/{cnpj}")]
-        [ProducesResponseType(typeof(CnpjResponse), StatusCodes.Status200OK)]
+        [HttpGet("v1/Busca/Livro/{isbn}")]
+        [ProducesResponseType(typeof(IsbnResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> BuscarCnpj([FromRoute] string cnpj)
+        public async Task<IActionResult> BuscarLivro([FromRoute] string isbn)
         {
-            var response = await _cnpjService.BuscarCnpj(cnpj);
+            var response = await _isbnService.BuscarLivro(isbn);
 
             return (response.CodigoHttp == HttpStatusCode.OK) ? Ok(response.Dados) : StatusCode((int)response.CodigoHttp, response.Erro);
         }

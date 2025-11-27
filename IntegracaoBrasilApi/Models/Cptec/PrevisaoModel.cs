@@ -14,10 +14,10 @@ namespace IntegracaoBrasilApi.Models
         public string? AtualizadoEm { get; set; }
 
         [JsonPropertyName("clima")]
-        public List<Clima>? Clima { get; set; }
+        public List<TempoModel>? Clima { get; set; }
     }
 
-    public class Clima
+    public class TempoModel
     {
         [JsonPropertyName("data")]
         public string? Data;

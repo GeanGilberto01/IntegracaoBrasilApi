@@ -1,5 +1,4 @@
 ﻿using IntegracaoBrasilApi.DTOs;
-using IntegracaoBrasilApi.Models;
 
 namespace IntegracaoBrasilApi.Interfaces
 {

@@ -7,23 +7,23 @@ namespace IntegracaoBrasilApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CnpjController : ControllerBase
+    public class FeriadoController : ControllerBase
     {
-        public readonly ICnpjService _cnpjService;
+        public readonly IFeriadoService _feriadoService;
 
-        public CnpjController(ICnpjService cnpjService)
+        public FeriadoController(IFeriadoService feriadoService)
         {
-            _cnpjService = cnpjService;
+            _feriadoService = feriadoService;
         }
 
-        [HttpGet("v1/Busca/Cnpj/{cnpj}")]
-        [ProducesResponseType(typeof(CnpjResponse), StatusCodes.Status200OK)]
+        [HttpGet("v1/Busca/Feriado/{ano}")]
+        [ProducesResponseType(typeof(FeriadoResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> BuscarCnpj([FromRoute] string cnpj)
+        public async Task<IActionResult> BuscarFeriados([FromRoute] int ano)
         {
-            var response = await _cnpjService.BuscarCnpj(cnpj);
+            var response = await _feriadoService.BuscarFeriados(ano);
 
             return (response.CodigoHttp == HttpStatusCode.OK) ? Ok(response.Dados) : StatusCode((int)response.CodigoHttp, response.Erro);
         }

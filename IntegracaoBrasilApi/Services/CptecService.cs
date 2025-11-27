@@ -51,13 +51,13 @@ namespace IntegracaoBrasilApi.Services
             return _mapper.Map<ResponseGenerico<PrevisaoResponse>>(response);
         }
 
-        public  async Task<ResponseGenerico<OndasResponse>> BuscarPrevisaoOceanicaCidade(int codigoCidade)
+        public async Task<ResponseGenerico<OndasResponse>> BuscarPrevisaoOceanicaCidade(int codigoCidade)
         {
             var response = await _brasilApi.BuscarPrevisaoOceanicaCidade(codigoCidade);
             return _mapper.Map<ResponseGenerico<OndasResponse>>(response);
         }
 
-        public  async Task<ResponseGenerico<OndasResponse>> BuscarPrevisaoOceanicaCidadeDias(int codigoCidade, int dias)
+        public async Task<ResponseGenerico<OndasResponse>> BuscarPrevisaoOceanicaCidadeDias(int codigoCidade, int dias)
         {
             var response = await _brasilApi.BuscarPrevisaoOceanicaCidadeDias(codigoCidade, dias);
             return _mapper.Map<ResponseGenerico<OndasResponse>>(response);

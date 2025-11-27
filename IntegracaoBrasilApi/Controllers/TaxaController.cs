@@ -7,35 +7,35 @@ namespace IntegracaoBrasilApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CepController : ControllerBase
+    public class TaxaController : ControllerBase
     {
-        public readonly ICepService _enderecoService;
+        public readonly ITaxaService _taxaService;
 
-        public CepController(ICepService enderecoService)
+        public TaxaController(ITaxaService taxaService)
         {
-            _enderecoService = enderecoService;
+            _taxaService = taxaService;
         }
 
-        [HttpGet("v1/Buscar/Cep/{cep}")]
-        [ProducesResponseType(typeof(CepResponse), StatusCodes.Status200OK)]
+        [HttpGet("v1/Busca/Taxas")]
+        [ProducesResponseType(typeof(List<TaxaResponse>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> BuscarCep([FromRoute] int cep)
+        public async Task<IActionResult> BuscarTodasTaxas()
         {
-            var response = await _enderecoService.BuscarCep(cep);
+            var response = await _taxaService.BuscarTodasTaxas();
 
             return (response.CodigoHttp == HttpStatusCode.OK) ? Ok(response.Dados) : StatusCode((int)response.CodigoHttp, response.Erro);
         }
 
-        [HttpGet("v2/Buscar/Cep/{cep}")]
-        [ProducesResponseType(typeof(CepResponse), StatusCodes.Status200OK)]
+        [HttpGet("v1/Busca/Taxas/{sigla}")]
+        [ProducesResponseType(typeof(TaxaResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> BuscarCepV2([FromRoute] string cep)
+        public async Task<IActionResult> BuscarTaxa([FromRoute] string sigla)
         {
-            var response = await _enderecoService.BuscarCepV2(cep);
+            var response = await _taxaService.BuscarTaxa(sigla);
 
             return (response.CodigoHttp == HttpStatusCode.OK) ? Ok(response.Dados) : StatusCode((int)response.CodigoHttp, response.Erro);
         }

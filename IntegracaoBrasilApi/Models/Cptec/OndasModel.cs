@@ -14,19 +14,19 @@ namespace IntegracaoBrasilApi.Models
         public string? AtualizadoEm { get; set; }
 
         [JsonPropertyName("ondas")]
-        public List<Onda>? Ondas { get; set; }
+        public List<OndaModel>? Ondas { get; set; }
     }
 
-    public class Onda
+    public class OndaModel
     {
         [JsonPropertyName("data")]
         public string? Data { get; set; }
 
         [JsonPropertyName("dados_ondas")]
-        public List<DadosOnda>? DadosOndas { get; set; }
+        public List<DadosOndaModel>? DadosOndas { get; set; }
     }
 
-    public class DadosOnda
+    public class DadosOndaModel
     {
         [JsonPropertyName("vento")]
         public double? Vento;

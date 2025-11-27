@@ -7,35 +7,35 @@ namespace IntegracaoBrasilApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CepController : ControllerBase
+    public class CorretoraController : ControllerBase
     {
-        public readonly ICepService _enderecoService;
+        public readonly ICorretoraService _corretoraService;
 
-        public CepController(ICepService enderecoService)
+        public CorretoraController(ICorretoraService corretoraService)
         {
-            _enderecoService = enderecoService;
+            _corretoraService = corretoraService;
         }
 
-        [HttpGet("v1/Buscar/Cep/{cep}")]
-        [ProducesResponseType(typeof(CepResponse), StatusCodes.Status200OK)]
+        [HttpGet("v1/Busca/Corretora")]
+        [ProducesResponseType(typeof(List<CorretoraResponse>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> BuscarCep([FromRoute] int cep)
+        public async Task<IActionResult> BuscarTodasCorretoras()
         {
-            var response = await _enderecoService.BuscarCep(cep);
+            var response = await _corretoraService.BuscarTodasCorretoras();
 
             return (response.CodigoHttp == HttpStatusCode.OK) ? Ok(response.Dados) : StatusCode((int)response.CodigoHttp, response.Erro);
         }
 
-        [HttpGet("v2/Buscar/Cep/{cep}")]
-        [ProducesResponseType(typeof(CepResponse), StatusCodes.Status200OK)]
+        [HttpGet("v1/Busca/Corretora/{cnpj}")]
+        [ProducesResponseType(typeof(CorretoraResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> BuscarCepV2([FromRoute] string cep)
+        public async Task<IActionResult> BuscarCorretora([FromRoute] string cnpj)
         {
-            var response = await _enderecoService.BuscarCepV2(cep);
+            var response = await _corretoraService.BuscarCorretora(cnpj);
 
             return (response.CodigoHttp == HttpStatusCode.OK) ? Ok(response.Dados) : StatusCode((int)response.CodigoHttp, response.Erro);
         }

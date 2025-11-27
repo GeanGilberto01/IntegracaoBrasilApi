@@ -6,7 +6,7 @@ using System.Net;
 namespace IntegracaoBrasilApi.Controllers
 {
     [ApiController]
-    [Route("api/v1/[controller]")]
+    [Route("[controller]")]
     public class CambioController : ControllerBase
     {
         private readonly ICambioService _cambioService;
@@ -16,8 +16,8 @@ namespace IntegracaoBrasilApi.Controllers
             _cambioService = cambioService;
         }
 
-        [HttpGet("busca/cambio/moeda")]
-        [ProducesResponseType(typeof(BancoResponse), StatusCodes.Status200OK)]
+        [HttpGet("v1/Busca/Cambio/Moeda")]
+        [ProducesResponseType(typeof(List<MoedaResponse>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -28,8 +28,8 @@ namespace IntegracaoBrasilApi.Controllers
             return (response.CodigoHttp == HttpStatusCode.OK) ? Ok(response.Dados) : StatusCode((int)response.CodigoHttp, response.Erro);
         }
 
-        [HttpGet("busca/cambio/{moeda}/{data}")]
-        [ProducesResponseType(typeof(BancoResponse), StatusCodes.Status200OK)]
+        [HttpGet("v1/Busca/Cambio/Moeda/{moeda}/{data}")]
+        [ProducesResponseType(typeof(CambioResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

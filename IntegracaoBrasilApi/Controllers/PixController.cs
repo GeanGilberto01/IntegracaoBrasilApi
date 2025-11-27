@@ -7,23 +7,23 @@ namespace IntegracaoBrasilApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CnpjController : ControllerBase
+    public class PixController : ControllerBase
     {
-        public readonly ICnpjService _cnpjService;
+        public readonly IPixService _pixService;
 
-        public CnpjController(ICnpjService cnpjService)
+        public PixController(IPixService pixService)
         {
-            _cnpjService = cnpjService;
+            _pixService = pixService;
         }
 
-        [HttpGet("v1/Busca/Cnpj/{cnpj}")]
-        [ProducesResponseType(typeof(CnpjResponse), StatusCodes.Status200OK)]
+        [HttpGet("v1/Busca/Pix/Participantes")]
+        [ProducesResponseType(typeof(List<PixParticipantesResponse>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> BuscarCnpj([FromRoute] string cnpj)
+        public async Task<IActionResult> BuscarParticipantesPix()
         {
-            var response = await _cnpjService.BuscarCnpj(cnpj);
+            var response = await _pixService.BuscarParticipantesPix();
 
             return (response.CodigoHttp == HttpStatusCode.OK) ? Ok(response.Dados) : StatusCode((int)response.CodigoHttp, response.Erro);
         }

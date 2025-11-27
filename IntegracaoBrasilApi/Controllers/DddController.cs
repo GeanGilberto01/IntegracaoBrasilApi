@@ -7,23 +7,23 @@ namespace IntegracaoBrasilApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CnpjController : ControllerBase
+    public class DddController : ControllerBase
     {
-        public readonly ICnpjService _cnpjService;
+        public readonly IDddService _dddService;
 
-        public CnpjController(ICnpjService cnpjService)
+        public DddController(IDddService dddService)
         {
-            _cnpjService = cnpjService;
+            _dddService = dddService;
         }
 
-        [HttpGet("v1/Busca/Cnpj/{cnpj}")]
+        [HttpGet("v1/Busca/Ddd/{ddd}")]
         [ProducesResponseType(typeof(CnpjResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> BuscarCnpj([FromRoute] string cnpj)
+        public async Task<IActionResult> BuscarDdds([FromRoute] int ddd)
         {
-            var response = await _cnpjService.BuscarCnpj(cnpj);
+            var response = await _dddService.BuscarDdds(ddd);
 
             return (response.CodigoHttp == HttpStatusCode.OK) ? Ok(response.Dados) : StatusCode((int)response.CodigoHttp, response.Erro);
         }

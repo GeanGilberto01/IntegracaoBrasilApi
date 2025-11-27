@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace IntegracaoBrasilApi.DTOs
+﻿namespace IntegracaoBrasilApi.DTOs
 {
     public class PrevisaoResponse
     {
@@ -10,10 +8,10 @@ namespace IntegracaoBrasilApi.DTOs
 
         public string? AtualizadoEm { get; set; }
 
-        public List<Clima>? Clima { get; set; }
+        public List<TempoResponse>? Clima { get; set; }
     }
 
-    public class Clima
+    public class TempoResponse
     {
         public string? Data;
 

@@ -7,7 +7,7 @@ using System.Net;
 namespace IntegracaoBrasilApi.Controllers
 {
     [ApiController]
-    [Route("api/v1/[controller]")]
+    [Route("[controller]")]
     public class BancoController : ControllerBase
     {
         private readonly IBancoService _bancoService;
@@ -17,8 +17,8 @@ namespace IntegracaoBrasilApi.Controllers
             _bancoService = bancoService;
         }
 
-        [HttpGet("busca/todos")]
-        [ProducesResponseType(typeof(BancoResponse), StatusCodes.Status200OK)]
+        [HttpGet("v1/Busca/Banco")]
+        [ProducesResponseType(typeof(List<BancoResponse>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -29,7 +29,7 @@ namespace IntegracaoBrasilApi.Controllers
             return (response.CodigoHttp == HttpStatusCode.OK) ? Ok(response.Dados) : StatusCode((int)response.CodigoHttp, response.Erro);
         }
 
-        [HttpGet("busca/{codigoBanco}")]
+        [HttpGet("v1/Busca/Banco/{codigoBanco}")]
         [ProducesResponseType(typeof(BancoResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
