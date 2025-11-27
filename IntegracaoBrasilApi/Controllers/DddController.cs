@@ -17,7 +17,7 @@ namespace IntegracaoBrasilApi.Controllers
         }
 
         [HttpGet("v1/Busca/Ddd/{ddd}")]
-        [ProducesResponseType(typeof(CnpjResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(DddResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

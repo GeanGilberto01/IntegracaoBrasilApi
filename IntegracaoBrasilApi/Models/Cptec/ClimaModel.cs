@@ -5,33 +5,33 @@ namespace IntegracaoBrasilApi.Models
     public class ClimaModel
     {
         [JsonPropertyName("codigo_icao")]
-        public string? CodigoIcao;
+        public string? CodigoIcao { get; set; }
 
         [JsonPropertyName("atualizado_em")]
-        public DateTime? AtualizadoEm;
+        public DateTime? AtualizadoEm { get; set; }
 
         [JsonPropertyName("pressao_atmosferica")]
-        public string? PressaoAtmosferica;
+        public string? PressaoAtmosferica { get; set; }
 
         [JsonPropertyName("visibilidade")]
-        public string? Visibilidade;
+        public string? Visibilidade { get; set; }
 
         [JsonPropertyName("vento")]
-        public int? Vento;
+        public int? Vento { get; set; }
 
         [JsonPropertyName("direcao_vento")]
-        public int? DirecaoVento;
+        public int? DirecaoVento { get; set; }
 
         [JsonPropertyName("umidade")]
-        public int? Umidade;
+        public int? Umidade { get; set; }
 
         [JsonPropertyName("condicao")]
-        public string? Condicao;
+        public string? Condicao { get; set; }
 
         [JsonPropertyName("condicao_Desc")]
-        public string? CondicaoDesc;
+        public string? CondicaoDesc { get; set; }
 
         [JsonPropertyName("temp")]
-        public int? Temp;
+        public int? Temp { get; set; }
     }
 }

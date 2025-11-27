@@ -2,8 +2,8 @@
 {
     public class DddResponse
     {
-        public string? Estado;
+        public string? Estado { get; set; }
 
-        public List<string>? Cidades;
+        public List<string>? Cidades { get; set; }
     }
 }

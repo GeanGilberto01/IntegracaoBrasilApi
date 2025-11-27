@@ -20,21 +20,21 @@ namespace IntegracaoBrasilApi.Models
     public class TempoModel
     {
         [JsonPropertyName("data")]
-        public string? Data;
+        public string? Data { get; set; }
 
         [JsonPropertyName("condicao")]
-        public string? Condicao;
+        public string? Condicao { get; set; }
 
         [JsonPropertyName("min")]
-        public int? Min;
+        public int? Min { get; set; }
 
         [JsonPropertyName("max")]
-        public int? Max;
+        public int? Max { get; set; }
 
         [JsonPropertyName("indice_uv")]
-        public int? IndiceUv;
+        public int? IndiceUv { get; set; }
 
         [JsonPropertyName("condicao_desc")]
-        public string? CondicaoDesc;
+        public string? CondicaoDesc { get; set; }
     }
 }

@@ -2,16 +2,16 @@
 {
     public class PixParticipantesResponse
     {
-        public string? Ispb;
+        public string? Ispb { get; set; }
 
-        public string? Nome;
+        public string? Nome { get; set; }
 
-        public string? NomeReduzido;
+        public string? NomeReduzido { get; set; }
 
-        public string? ModalidadeParticipacao;
+        public string? ModalidadeParticipacao { get; set; }
 
-        public string? TipoParticipacao;
+        public string? TipoParticipacao { get; set; }
 
-        public DateTime? InicioOperacao;
+        public DateTime? InicioOperacao { get; set; }
     }
 }

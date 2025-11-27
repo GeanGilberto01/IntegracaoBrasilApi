@@ -2,10 +2,10 @@
 {
     public class FeriadoResponse
     {
-        public string? Data;
+        public string? Data { get; set; }
 
-        public string? Nome;
+        public string? Nome { get; set; }
 
-        public string? Tipo;
+        public string? Tipo { get; set; }
     }
 }

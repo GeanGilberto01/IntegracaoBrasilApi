@@ -5,60 +5,60 @@ namespace IntegracaoBrasilApi.Models
     public class CorretoraModel
     {
         [JsonPropertyName("bairro")]
-        public string? Bairro;
+        public string? Bairro { get; set; }
 
         [JsonPropertyName("cep")]
-        public string? Cep;
+        public string? Cep { get; set; }
 
         [JsonPropertyName("cnpj")]
-        public string? Cnpj;
+        public string? Cnpj { get; set; }
 
         [JsonPropertyName("codigo_cvm")]
-        public string? CodigoCvm;
+        public string? CodigoCvm { get; set; }
 
         [JsonPropertyName("complemento")]
-        public string? Complemento;
+        public string? Complemento { get; set; }
 
         [JsonPropertyName("data_inicio_situacao")]
-        public string? DataInicioSituacao;
+        public string? DataInicioSituacao { get; set; }
 
         [JsonPropertyName("data_patrimonio_liquido")]
-        public string? DataPatrimonioLiquido;
+        public string? DataPatrimonioLiquido { get; set; }
 
         [JsonPropertyName("data_registro")]
-        public string? DataRegistro;
+        public string? DataRegistro { get; set; }
 
         [JsonPropertyName("email")]
-        public string? Email;
+        public string? Email { get; set; }
 
         [JsonPropertyName("logradouro")]
-        public string? Logradouro;
+        public string? Logradouro { get; set; }
 
         [JsonPropertyName("municipio")]
-        public string? Municipio;
+        public string? Municipio { get; set; }
 
         [JsonPropertyName("nome_social")]
-        public string? NomeSocial;
+        public string? NomeSocial { get; set; }
 
         [JsonPropertyName("nome_comercial")]
-        public string? NomeComercial;
+        public string? NomeComercial { get; set; }
 
         [JsonPropertyName("pais")]
-        public string? Pais;
+        public string? Pais { get; set; }
 
         [JsonPropertyName("status")]
-        public string? Status;
+        public string? Status { get; set; }
 
         [JsonPropertyName("telefone")]
-        public string? Telefone;
+        public string? Telefone { get; set; }
 
         [JsonPropertyName("type")]
-        public string? Tipo;
+        public string? Tipo { get; set; }
 
         [JsonPropertyName("uf")]
-        public string? Uf;
+        public string? Uf { get; set; }
 
         [JsonPropertyName("valor_patrimonio_liquido")]
-        public string? ValorPatrimonioLiquido;
+        public string? ValorPatrimonioLiquido { get; set; }
     }
 }

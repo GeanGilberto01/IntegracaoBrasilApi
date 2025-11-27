@@ -20,20 +20,20 @@
 
     public class DadosOndaResponse
     {
-        public double? Vento;
+        public double? Vento { get; set; }
 
-        public string? DirecaoVento;
+        public string? DirecaoVento { get; set; }
 
-        public string? DirecaoVentoDesc;
+        public string? DirecaoVentoDesc { get; set; }
 
-        public double? AlturaOnda;
+        public double? AlturaOnda { get; set; }
 
-        public string? DirecaoOnda;
+        public string? DirecaoOnda { get; set; }
 
-        public string? DirecaoOndaDesc;
+        public string? DirecaoOndaDesc { get; set; }
 
-        public string? Agitacao;
+        public string? Agitacao { get; set; }
 
-        public string? Hora;
+        public string? Hora { get; set; }
     }
 }

@@ -2,24 +2,24 @@
 {
     public class ClimaResponse
     {
-        public string? CodigoIcao;
+        public string? CodigoIcao { get; set; }
 
-        public DateTime? AtualizadoEm;
+        public DateTime? AtualizadoEm { get; set; }
 
-        public string? PressaoAtmosferica;
+        public string? PressaoAtmosferica { get; set; }
 
-        public string? Visibilidade;
+        public string? Visibilidade { get; set; }
 
-        public int? Vento;
+        public int? Vento { get; set; }
 
-        public int? DirecaoVento;
+        public int? DirecaoVento { get; set; }
 
-        public int? Umidade;
+        public int? Umidade { get; set; }
 
-        public string? Condicao;
+        public string? Condicao { get; set; }
 
-        public string? CondicaoDesc;
+        public string? CondicaoDesc { get; set; }
 
-        public int? Temp;
+        public int? Temp { get; set; }
     }
 }

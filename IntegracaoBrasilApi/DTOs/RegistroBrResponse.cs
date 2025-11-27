@@ -2,18 +2,18 @@
 {
     public class RegistroBrResponse
     {
-        public int? StatusCode;
+        public int? StatusCode { get; set; }
 
-        public string? Status;
+        public string? Status { get; set; }
 
-        public string? Fqdn;
+        public string? Fqdn { get; set; }
 
-        public List<string>? Hosts;
+        public List<string>? Hosts { get; set; }
 
-        public string? PublicationStatus;
+        public string? PublicationStatus { get; set; }
 
-        public DateTime? ExpiresAt;
+        public DateTime? ExpiresAt { get; set; }
 
-        public List<string>? Suggestions;
+        public List<string>? Suggestions { get; set; }
     }
 }

@@ -2,8 +2,8 @@
 {
     public class TaxaResponse
     {
-        public string? Nome;
+        public string? Nome { get; set; }
 
-        public double? Valor;
+        public double? Valor { get; set; }
     }
 }

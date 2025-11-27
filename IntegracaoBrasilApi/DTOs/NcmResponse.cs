@@ -2,18 +2,18 @@
 {
     public class NcmResponse
     {
-        public string? Codigo;
+        public string? Codigo { get; set; }
 
-        public string? Descricao;
+        public string? Descricao { get; set; }
 
-        public string? DataInicio;
+        public string? DataInicio { get; set; }
 
-        public string? DataFim;
+        public string? DataFim { get; set; }
 
-        public string? TipoAto;
+        public string? TipoAto { get; set; }
 
-        public string? NumeroAto;
+        public string? NumeroAto { get; set; }
 
-        public string? AnoAto;
+        public string? AnoAto { get; set; }
     }
 }

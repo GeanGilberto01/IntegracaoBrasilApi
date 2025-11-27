@@ -5,21 +5,21 @@ namespace IntegracaoBrasilApi.Models
     public class PixParticipantesModel
     {
         [JsonPropertyName("ispb")]
-        public string? Ispb;
+        public string? Ispb { get; set; }
 
         [JsonPropertyName("nome")]
-        public string? Nome;
+        public string? Nome { get; set; }
 
         [JsonPropertyName("nome_reduzido")]
-        public string? NomeReduzido;
+        public string? NomeReduzido { get; set; }
 
         [JsonPropertyName("modalidade_participacao")]
-        public string? ModalidadeParticipacao;
+        public string? ModalidadeParticipacao { get; set; }
 
         [JsonPropertyName("tipo_participacao")]
-        public string? TipoParticipacao;
+        public string? TipoParticipacao { get; set; }
 
         [JsonPropertyName("inicio_operacao")]
-        public DateTime? InicioOperacao;
+        public DateTime? InicioOperacao { get; set; }
     }
 }

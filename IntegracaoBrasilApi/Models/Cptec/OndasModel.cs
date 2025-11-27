@@ -29,27 +29,27 @@ namespace IntegracaoBrasilApi.Models
     public class DadosOndaModel
     {
         [JsonPropertyName("vento")]
-        public double? Vento;
+        public double? Vento { get; set; }
 
         [JsonPropertyName("direcao_vento")]
-        public string? DirecaoVento;
+        public string? DirecaoVento { get; set; }
 
         [JsonPropertyName("direcao_vento_desc")]
-        public string? DirecaoVentoDesc;
+        public string? DirecaoVentoDesc { get; set; }
 
         [JsonPropertyName("altura_onda")]
-        public double? AlturaOnda;
+        public double? AlturaOnda { get; set; }
 
         [JsonPropertyName("direcao_onda")]
-        public string? DirecaoOnda;
+        public string? DirecaoOnda { get; set; }
 
         [JsonPropertyName("direcao_onda_desc")]
-        public string? DirecaoOndaDesc;
+        public string? DirecaoOndaDesc { get; set; }
 
         [JsonPropertyName("agitacao")]
-        public string? Agitacao;
+        public string? Agitacao { get; set; }
 
         [JsonPropertyName("hora")]
-        public string? Hora;
+        public string? Hora { get; set; }
     }
 }

@@ -2,42 +2,42 @@
 {
     public class CorretoraResponse
     {
-        public string? Bairro;
+        public string? Bairro { get; set; }
 
-        public string? Cep;
+        public string? Cep { get; set; }
 
-        public string? Cnpj;
+        public string? Cnpj { get; set; }
 
-        public string? CodigoCvm;
+        public string? CodigoCvm { get; set; }
 
-        public string? Complemento;
+        public string? Complemento { get; set; }
 
-        public string? DataInicioSituacao;
+        public string? DataInicioSituacao { get; set; }
 
-        public string? DataPatrimonioLiquido;
+        public string? DataPatrimonioLiquido { get; set; }
 
-        public string? DataRegistro;
+        public string? DataRegistro { get; set; }
 
-        public string? Email;
+        public string? Email { get; set; }
 
-        public string? Logradouro;
+        public string? Logradouro { get; set; }
 
-        public string? Municipio;
+        public string? Municipio { get; set; }
 
-        public string? NomeSocial;
+        public string? NomeSocial { get; set; }
 
-        public string? NomeComercial;
+        public string? NomeComercial { get; set; }
 
-        public string? Pais;
+        public string? Pais { get; set; }
 
-        public string? Status;
+        public string? Status { get; set; }
 
-        public string? Telefone;
+        public string? Telefone { get; set; }
 
-        public string? Tipo;
+        public string? Tipo { get; set; }
 
-        public string? Uf;
+        public string? Uf { get; set; }
 
-        public string? ValorPatrimonioLiquido;
+        public string? ValorPatrimonioLiquido { get; set; }
     }
 }

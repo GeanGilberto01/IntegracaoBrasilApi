@@ -2,6 +2,6 @@
 {
     public class ModeloResponse
     {
-        public string? Responseo { get; set; }
+        public string? Modelo { get; set; }
     }
 }

@@ -5,60 +5,60 @@ namespace IntegracaoBrasilApi.Models
     public class DimensionsModel
     {
         [JsonPropertyName("width")]
-        public double? Width;
+        public double? Width { get; set; }
 
         [JsonPropertyName("height")]
-        public double? Height;
+        public double? Height { get; set; }
 
         [JsonPropertyName("unit")]
-        public string? Unit;
+        public string? Unit { get; set; }
     }
 
     public class IsbnModel
     {
         [JsonPropertyName("isbn")]
-        public string? Isbn;
+        public string? Isbn { get; set; }
 
         [JsonPropertyName("title")]
-        public string? Title;
+        public string? Title { get; set; }
 
         [JsonPropertyName("subtitle")]
-        public object? Subtitle;
+        public object? Subtitle { get; set; }
 
         [JsonPropertyName("authors")]
-        public List<string>? Authors;
+        public List<string>? Authors { get; set; }
 
         [JsonPropertyName("publisher")]
-        public string? Publisher;
+        public string? Publisher { get; set; }
 
         [JsonPropertyName("synopsis")]
-        public string? Synopsis;
+        public string? Synopsis { get; set; }
 
         [JsonPropertyName("dimensions")]
-        public DimensionsModel? Dimensions;
+        public DimensionsModel? Dimensions { get; set; }
 
         [JsonPropertyName("year")]
-        public int? Year;
+        public int? Year { get; set; }
 
         [JsonPropertyName("format")]
-        public string? Format;
+        public string? Format { get; set; }
 
         [JsonPropertyName("page_count")]
-        public int? PageCount;
+        public int? PageCount { get; set; }
 
         [JsonPropertyName("subjects")]
-        public List<string>? Subjects;
+        public List<string>? Subjects { get; set; }
 
         [JsonPropertyName("location")]
-        public string? Location;
+        public string? Location { get; set; }
 
         [JsonPropertyName("retail_price")]
-        public object? RetailPrice;
+        public object? RetailPrice { get; set; }
 
         [JsonPropertyName("cover_url")]
-        public object? CoverUrl;
+        public object? CoverUrl { get; set; }
 
         [JsonPropertyName("provider")]
-        public string? Provider;
+        public string? Provider { get; set; }
     }
 }

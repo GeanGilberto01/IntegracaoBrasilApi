@@ -5,9 +5,9 @@ namespace IntegracaoBrasilApi.Models
     public class DddModel
     {
         [JsonPropertyName("state")]
-        public string? Estado;
+        public string? Estado { get; set; }
 
         [JsonPropertyName("cities")]
-        public List<string>? Cidades;
+        public List<string>? Cidades { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿namespace IntegracaoBrasilApi.DTOs
+﻿
+namespace IntegracaoBrasilApi.DTOs
 {
     public class PrevisaoResponse
     {
@@ -13,16 +14,16 @@
 
     public class TempoResponse
     {
-        public string? Data;
+        public string? Data { get; set; }
 
-        public string? Condicao;
+        public string? Condicao { get; set; }
 
-        public int? Min;
+        public int? Min { get; set; }
 
-        public int? Max;
+        public int? Max { get; set; }
 
-        public int? IndiceUv;
+        public int? IndiceUv { get; set; }
 
-        public string? CondicaoDesc;
+        public string? CondicaoDesc { get; set; }
     }
 }

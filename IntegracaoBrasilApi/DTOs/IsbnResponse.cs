@@ -2,43 +2,43 @@
 {
     public class DimensionsResponse
     {
-        public double? Width;
+        public double? Width { get; set; }
 
-        public double? Height;
+        public double? Height { get; set; }
 
-        public string? Unit;
+        public string? Unit { get; set; }
     }
 
     public class IsbnResponse
     {
-        public string? Isbn;
+        public string? Isbn { get; set; }
 
-        public string? Title;
+        public string? Title { get; set; }
 
-        public object? Subtitle;
+        public object? Subtitle { get; set; }
 
-        public List<string>? Authors;
+        public List<string>? Authors { get; set; }
 
-        public string? Publisher;
+        public string? Publisher { get; set; }
 
-        public string? Synopsis;
+        public string? Synopsis { get; set; }
 
-        public DimensionsResponse? Dimensions;
+        public DimensionsResponse? Dimensions { get; set; }
 
-        public int? Year;
+        public int? Year { get; set; }
 
-        public string? Format;
+        public string? Format { get; set; }
 
-        public int? PageCount;
+        public int? PageCount { get; set; }
 
-        public List<string>? Subjects;
+        public List<string>? Subjects { get; set; }
 
-        public string? Location;
+        public string? Location { get; set; }
 
-        public object? RetailPrice;
+        public object? RetailPrice { get; set; }
 
-        public object? CoverUrl;
+        public object? CoverUrl { get; set; }
 
-        public string? Provider;
+        public string? Provider { get; set; }
     }
 }
